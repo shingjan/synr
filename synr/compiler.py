@@ -601,6 +601,7 @@ class Compiler:
                 self._expr2type(expr.end),
             )
         if isinstance(expr, Call):
+            print(expr.func_name)
             if expr.func_name.name == BuiltinOp.Subscript:  # type: ignore
                 assert isinstance(
                     expr.params[0], Var
